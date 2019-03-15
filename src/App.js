@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Create from './components/Create.js';
 import './App.css';
 
 class App extends Component {
@@ -7,18 +8,21 @@ class App extends Component {
     this.state = {
       pictures: []
     }
+    this.addPicture = this.addPicture.bind(this);
   }
 
   addPicture(picture) {
+    let { pictures } = this.state;
+    pictures.push(picture);
     this.setState({
-      pictures: this.state.picture.concat([ picture ])
-    })
+      pictures
+    }, () => console.log('pictures: ', this.state.pictures))
   }
 
   render() {
     return (
       <div>
-
+        <Create addPicture={this.addPicture} />
       </div>
     );
   }
