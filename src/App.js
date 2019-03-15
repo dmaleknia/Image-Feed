@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Create from './components/Create.js';
+import Post from './components/Post';
 import './App.css';
 
 class App extends Component {
@@ -23,6 +24,11 @@ class App extends Component {
     return (
       <div>
         <Create addPicture={this.addPicture} />
+        {this.state.pictures.map((picture, index) =>
+        <div key={index}>
+          <Post url={picture[0]} title={picture[1]} />
+        </div>
+        )}
       </div>
     );
   }

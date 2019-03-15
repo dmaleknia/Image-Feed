@@ -4,8 +4,8 @@ class Create extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: "",
-      title: ""
+      url: '',
+      title: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleURLChange = this.handleURLChange.bind(this);
@@ -18,6 +18,12 @@ class Create extends Component {
     let { url, title } = this.state;
     if (url.length > 0 && title.length > 0) {
       this.props.addPicture([ url, title ]);
+      this.setState({
+        url: '',
+        title: ''
+      });
+    } else {
+      alert('URL and title cannot be empty.')
     }
   }
 
