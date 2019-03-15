@@ -47,7 +47,9 @@ class Create extends Component {
             <input id='title' className='field' type='text' value={this.state.title} onChange={this.handleTitleChange} placeholder={'Title'} />
           </label>
           <button className='button' type="submit me" onClick={this.handleSubmit}>New Post</button>
+          <div className='clear' />
         </div>
+        <br />
       </form>
     );
   }

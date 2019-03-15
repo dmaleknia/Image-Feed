@@ -13,7 +13,6 @@ body {
 #title {
   width: 80%;
   float: left;
-  z-index: -99;
   margin: 0;
 }
 
@@ -28,4 +27,25 @@ body {
   margin: 20px;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.imageTitle {
+  justify-content: center;
+  color: black;
+  font-size: 22px;
+}
+
+.image {
+  max-width: 100%;
+  justify-content: center;
+}
+
+.post {
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 20px;
 }
