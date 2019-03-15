@@ -34,11 +34,11 @@ body {
   justify-content: center;
   color: black;
   font-size: 22px;
+  text-align: center;
 }
 
 .image {
   max-width: 100%;
-  justify-content: center;
 }
 
 .post {
@@ -47,5 +47,4 @@ body {
   margin-bottom: 30px;
   margin-left: 40px;
   margin-right: 40px;
-  padding-top: 20px;
 }

@@ -17,7 +17,7 @@ class App extends Component {
     pictures.push(picture);
     this.setState({
       pictures
-    }, () => console.log('pictures: ', this.state.pictures))
+    });
   }
 
   render() {
@@ -27,9 +27,9 @@ class App extends Component {
       <div>
         <Create addPicture={this.addPicture} />
         {pictures.map((picture, index) =>
-        <div key={index}>
-          <Post url={picture[0]} title={picture[1]} />
-        </div>
+          <div key={index}>
+            <Post url={picture[0]} title={picture[1]} />
+          </div>
         )}
       </div>
     );
