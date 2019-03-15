@@ -21,10 +21,12 @@ class App extends Component {
   }
 
   render() {
+    let { pictures } = this.state;
+    pictures.reverse();
     return (
       <div>
         <Create addPicture={this.addPicture} />
-        {this.state.pictures.map((picture, index) =>
+        {pictures.map((picture, index) =>
         <div key={index}>
           <Post url={picture[0]} title={picture[1]} />
         </div>
