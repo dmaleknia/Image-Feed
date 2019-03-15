@@ -30,6 +30,10 @@ body {
   margin-bottom: 40px;
 }
 
+.bottomForm * {
+  white-space: nowrap;
+}
+
 .imageTitle {
   justify-content: center;
   color: black;
