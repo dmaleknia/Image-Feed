@@ -14,7 +14,6 @@ class Create extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
     let { url, title } = this.state;
     if (url.length > 0 && title.length > 0) {
       this.props.addPicture([ url, title ]);
