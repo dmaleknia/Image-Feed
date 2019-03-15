@@ -1,0 +1,17 @@
+.form {
+  margin: 20px 40px 40px;
+}
+
+.form-field {
+  display: flex;
+  background-color: rebeccapurple;
+}
+
+.form-field > input {
+    flex-grow: 12;
+}
+
+.bottom-form {
+  background-color: red;
+}
+

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '../Button';
+import './style.css';
 
 class Create extends Component {
   constructor(props) {
@@ -14,6 +16,7 @@ class Create extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    console.log(this.state);
     let { url, title } = this.state;
     if (url.length > 0 && title.length > 0) {
       this.props.addPicture([ url, title ]);
@@ -37,18 +40,32 @@ class Create extends Component {
   render() {
     return (
       <form className='form'>
-        <label>
-          <input id='url' className='field' type='text' value={this.state.url} onChange={this.handleURLChange} placeholder={'Enter URL'} />
-        </label>
-        <br />
-        <div className='bottomForm'>
-          <label>
-            <input id='title' className='field' type='text' value={this.state.title} onChange={this.handleTitleChange} placeholder={'Title'} />
-          </label>
-          <button className='button' type="submit me" onClick={this.handleSubmit}>New Post</button>
-          <div className='clear' />
+        <div className='form-field'>
+          <label htmlFor='url'></label>
+            <input
+                className='form-font'
+                name='url'
+                type='text'
+                value={this.state.url}
+                onChange={this.handleURLChange}
+                placeholder={'Enter URL'}
+            />
         </div>
-        <br />
+        <div className="form-field bottom-form">
+          <label htmlFor="title"></label>
+            <input
+                className='form-font'
+                name='title'
+                type='text'
+                value={this.state.title}
+                onChange={this.handleTitleChange}
+                placeholder={'Title'}
+            />
+            <Button
+                title="New Post"
+                onClick={this.handleSubmit}
+            />
+        </div>
       </form>
     );
   }

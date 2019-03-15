@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Create from './components/Create.js';
-import Post from './components/Post';
+import Create from './components/Create/Create';
+import Post from './components/Post/Post';
 import './App.css';
 
 class App extends Component {
@@ -21,12 +21,11 @@ class App extends Component {
   }
 
   render() {
-    let { pictures } = this.state;
-    pictures.reverse();
+    const { pictures } = this.state;
     return (
       <div>
         <Create addPicture={this.addPicture} />
-        {pictures.map((picture, index) =>
+        {pictures.reverse().map((picture, index) =>
           <div key={index}>
             <Post url={picture[0]} title={picture[1]} />
           </div>
