@@ -1,3 +1,31 @@
 body {
   background-color: #18212d;
 }
+
+.field {
+  font-size: 22px;
+}
+
+#url {
+  width: 100%;
+}
+
+#title {
+  width: 80%;
+  float: left;
+  z-index: -99;
+  margin: 0;
+}
+
+.button {
+  font-size: 22px;
+  width: 19%;
+  float: right;
+  margin: 0;
+}
+
+.form {
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}

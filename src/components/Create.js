@@ -37,14 +37,17 @@ class Create extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className='form'>
         <label>
-          <input type="text" value={this.state.url} onChange={this.handleURLChange} placeholder={'Enter URL'} />
+          <input id='url' className='field' type='text' value={this.state.url} onChange={this.handleURLChange} placeholder={'Enter URL'} />
         </label>
-        <label>
-          <input type="text" value={this.state.title} onChange={this.handleTitleChange} placeholder={'Title'} />
-        </label>
-        <input type="submit" value="New Post" />
+        <br />
+        <div className='bottomForm'>
+          <label>
+            <input id='title' className='field' type='text' value={this.state.title} onChange={this.handleTitleChange} placeholder={'Title'} />
+          </label>
+          <button className='button' type="submit me" onClick={this.handleSubmit}>New Post</button>
+        </div>
       </form>
     );
   }
