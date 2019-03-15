@@ -8,10 +8,17 @@ class App extends Component {
       pictures: []
     }
   }
+
+  addPicture(picture) {
+    this.setState({
+      pictures: this.state.picture.concat([ picture ])
+    })
+  }
+
   render() {
     return (
       <div>
-        hello from app!
+
       </div>
     );
   }
